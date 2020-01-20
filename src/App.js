@@ -1,24 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Grocery from './components/Grocery'
+import ShoppingBag from './components/ShoppingBag'
+import ShoppingStats from './components/ShoppingStats'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-12">
+             Shoppers Stop!
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+             You have $20 to spend on Grocery today.
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-4">
+          <Grocery/>
+          </div>
+          <div className="col-md-4">
+          <ShoppingBag/>
+          </div>
+          <div className="col-md-4">
+          <ShoppingStats/>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
